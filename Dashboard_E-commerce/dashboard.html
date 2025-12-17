@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <title>E-Dashboard</title>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen transition-colors duration-300">
+
+<!-- NAVBAR -->
+<nav class="bg-indigo-600 text-white p-4 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <span class="text-2xl">🛍️</span>
+            <span class="font-bold text-xl">My Dashboard</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <button id="darkToggle" class="bg-indigo-500 hover:bg-indigo-400 px-3 py-2 rounded transition">
+                🌙
+            </button>
+            <button class="md:inline-block bg-indigo-500 px-4 py-2 rounded-lg hover:bg-indigo-400 transition">
+                👤
+            </button>
+            <button class="md:inline-block bg-indigo-500 px-4 py-2 rounded-lg hover:bg-indigo-400 transition">
+                 ⚙️
+            </button>
+            <!-- Hamburger -->
+            <button id="menuBtn" class="md:hidden text-2xl">
+                ☰
+            </button>
+        </div>
+    </div>
+</nav>
+<!-- ================= MENU MOBILE ================= -->
+<div id="mobileMenu"
+     class="hidden bg-indigo-600 text-white md:hidden p-4 space-y-3">
+    <a href="#" class="block hover:bg-indigo-500 p-2 rounded">📊 Dashboard</a>
+    <a href="#" class="block hover:bg-indigo-500 p-2 rounded">📦 Produits</a>
+    <a href="#" class="block hover:bg-indigo-500 p-2 rounded">🛒 Commandes</a>
+</div>
+
+
+<div class="flex">
+
+    <!-- SIDEBAR -->
+    <aside class="hidden lg:block w-64 bg-gray-800 text-white min-h-screen p-6">
+        <nav class="space-y-3">
+            <a href="#" class="block bg-indigo-600 px-4 py-3 rounded-lg font-semibold">
+                📊 Dashboard
+            </a>
+            <a href="#" class="block px-4 py-3 rounded-lg hover:bg-gray-700 transition">
+                📦 Produits
+            </a>
+            <a href="#" class="block px-4 py-3 rounded-lg hover:bg-gray-700 transition">
+                🛒 Commandes
+            </a>
+            <a href="#" class="block px-4 py-3 rounded-lg hover:bg-gray-700 transition">
+                👥 Clients
+            </a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="flex-1 p-6 space-y-10 text-gray-800 dark:text-gray-100">
+
+        <!-- STATISTIQUES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-6 rounded-xl shadow">
+                <p class="text-sm">Ventes totales</p>
+                <p class="text-3xl font-bold mt-2">45 234 €</p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-500 to-green-700 text-white p-6 rounded-xl shadow">
+                <p class="text-sm">Commandes</p>
+                <p class="text-3xl font-bold mt-2">352</p>
+            </div>
+
+            <div class="bg-gradient-to-r from-orange-500 to-orange-700 text-white p-6 rounded-xl shadow">
+                <p class="text-sm">Clients</p>
+                <p class="text-3xl font-bold mt-2">1 248</p>
+            </div>
+
+            <div class="bg-gradient-to-r from-purple-500 to-purple-700 text-white p-6 rounded-xl shadow">
+                <p class="text-sm">Revenu moyen</p>
+                <p class="text-3xl font-bold mt-2">128 €</p>
+            </div>
+
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4 dark:text-white">📈 Ventes mensuelles</h2>
+    
+            <div class="flex items-end gap-4 h-40">
+                <div class="w-10 bg-indigo-500 rounded hover:opacity-80 transition h-[60%] rounded"></div>
+                <div class="w-10 bg-green-500 rounded hover:opacity-80 transition h-[80%] rounded"></div>
+                <div class="w-10 bg-orange-500 rounded hover:opacity-80 transition h-[50%] rounded"></div>
+                <div class="w-10 bg-purple-500 rounded hover:opacity-80 transition h-[90%] rounded"></div>
+                <div class="w-10 bg-blue-500 rounded hover:opacity-80 transition h-[70%] rounded"></div>
+            </div>
+        </div>
+
+        <!-- PRODUITS -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 dark:text-white">📦 Produits récents</h2>
+
+            <div class="space-y-3">
+                <div class="flex justify-between border-b pb-2">
+                    <span>T-Shirt Blanc</span>
+                    <span class="text-green-600 font-semibold">29.99 €</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Jean Slim</span>
+                    <span class="text-green-600 font-semibold">79.99 €</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMMANDES -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 dark:text-white">🛒 Commandes récentes</h2>
+
+            <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                    <span>Commande #1234</span>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                        Livré
+                    </span>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <span>Commande #1235</span>
+                    <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">
+                        En cours
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+<script>
+    // Menu hamburger
+    document.getElementById('menuBtn').addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.toggle('hidden')
+    })
+
+    // Dark mode
+    document.getElementById('darkToggle').addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark')
+    })
+</script>
+</body>
+</html>

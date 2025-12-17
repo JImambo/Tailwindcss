@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Carte</title>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+    <!-- LA CARTE -->
+<div class="bg-white rounded-2xl shadow-xl max-w-md w-full overflow-hidden">
+
+    <!-- Bannière colorée -->
+    <div class="h-32 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+    
+    <!-- Photo de profil -->
+    <div class="flex justify-center -mt-16">
+        <div class="w-32 h-32 rounded-full border-4 border-white overflow-hidden">
+            <div class="w-full h-full bg-gradient-to-br from-pink-400 to-orange-400 
+                        flex items-center justify-center">
+                <span class="text-white text-4xl font-bold">JD</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Informations -->
+    <div class="p-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-800">Jean Dupont</h2>
+        <p class="text-gray-600 mt-2">Développeur Frontend</p>
+        
+        <div class="mt-6 grid grid-cols-3 gap-4">
+            <div>
+                <p class="text-gray-500 text-sm">Projets</p>
+                <p class="text-xl font-bold text-blue-600">42</p>
+            </div>
+            <div>
+                <p class="text-gray-500 text-sm">Followers</p>
+                <p class="text-xl font-bold text-green-600">1.2k</p>
+            </div>
+            <div>
+                <p class="text-gray-500 text-sm">Étoiles</p>
+                <p class="text-xl font-bold text-yellow-600">89</p>
+            </div>
+        </div>
+        
+        <div class="mt-8 flex gap-3">
+            <button class="flex-1 bg-blue-500 text-white py-3 rounded-lg 
+                           hover:bg-blue-600 transition">
+                Message
+            </button>
+            <button class="flex-1 bg-gray-200 text-gray-800 py-3 rounded-lg 
+                           hover:bg-gray-300 transition">
+                Suivre
+            </button>
+        </div>
+    </div>
+    
+    <div class="bg-gray-50 px-8 py-4 border-t border-gray-200">
+        <p class="text-gray-600 text-sm text-center">
+            Membre depuis 2023 • Dernière connexion aujourd'hui
+        </p>
+    </div>
+</div>
+</body>
+</html>
